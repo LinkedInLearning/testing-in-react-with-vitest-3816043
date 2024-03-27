@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Fruit Snapshot Test > Should create snapshots file 1`] = `
+{
+  "family": "Rosaceae",
+  "genus": "Fragaria",
+  "id": 1,
+  "name": "strawberry",
+  "nutritions": {
+    "calories": 29,
+    "carbohydrates": 5.5,
+    "fat": 0.4,
+    "protein": 0.8,
+    "sugar": 5.4,
+  },
+  "order": "Rosales",
+}
+`;
