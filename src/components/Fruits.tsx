@@ -1,4 +1,4 @@
-interface Fruit {
+export interface Fruit {
   name: string;
   id: number;
   family: string;
