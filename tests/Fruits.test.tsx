@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 
 import { Fruits } from '../src/components/Fruits';
 
+
 describe('Fruit Snapshot Test', () => {
   it('Should load fruit data', async () => {
     // ARRANGE

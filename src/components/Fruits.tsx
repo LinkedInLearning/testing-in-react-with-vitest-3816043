@@ -75,12 +75,11 @@ async function loadFruit(name: string): Promise<Fruit | undefined> {
 
   return fruits.find((fruit: Fruit) => fruit.name === name);
 }
-
-export async function Fruits(name: string) {
+export async function Fruits(name: string): Promise<Fruit | undefined> {
   const fruit = await loadFruit(name);
 
   if (!fruit) {
-    return Promise.reject(new Error('No fruit not found: ' + name));
+    return;
   }
 
   return fruit;
