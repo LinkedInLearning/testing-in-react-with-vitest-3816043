@@ -1,9 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-
-import { Fruits } from '../src/components/Fruits';
 import React from 'react';
+
 import FruitSearch from '../src/components/FruitSearch';
 
 const setup = () => {
