@@ -3,6 +3,7 @@ import { act, fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
+import App from '../src/App';
 import FruitSearch from '../src/components/FruitSearch';
 
 const setup = () => {
