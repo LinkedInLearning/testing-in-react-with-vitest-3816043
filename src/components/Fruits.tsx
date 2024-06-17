@@ -80,7 +80,7 @@ export async function Fruits(name: string) {
   const fruit = await loadFruit(name);
 
   if (!fruit) {
-    return Promise.reject(new Error('No fruit found with name: ' + name));
+    return;
   }
 
   return fruit;
