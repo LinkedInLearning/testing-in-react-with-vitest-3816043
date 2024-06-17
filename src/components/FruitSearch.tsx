@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Fruit, Fruits } from './Fruits';
 
-const FruitSearch = (fruitName: string) => {
+const FruitSearch = ({fruitName}: { fruitName: string }) => {
   const [fruit, setFruit] = useState<Fruit | undefined>(undefined);
   const [error] = useState<object | null>(null);
 
