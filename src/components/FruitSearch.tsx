@@ -32,7 +32,7 @@ const FruitSearch = () => {
 
   return (
     <div>
-      <div className="row mb-5 ">
+      <div className="row mb-5 text-center justify-content-center">
         <div className="col-lg-4 col-lg-offset-4">
           <div className="container input-group">
             <input
