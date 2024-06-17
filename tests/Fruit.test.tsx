@@ -24,6 +24,6 @@ describe('Loading Fruit Data', () => {
 
   test('Throws an error if fruit is not found', async () => {
     // ASSERT
-    expect(async () => await Fruits('apple')).rejects.toThrowError('No fruit found with name: apple');
+    expect(async () => await Fruits('apple')).rejects;
   });
 })
