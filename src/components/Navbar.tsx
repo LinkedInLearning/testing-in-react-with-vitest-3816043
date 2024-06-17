@@ -11,7 +11,6 @@ function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto justify-content-end">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Fruits</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
