@@ -13,7 +13,7 @@ export interface Fruit {
   };
 }
 
-async function loadFruit(name: string): Promise<Fruit | undefined> {
+export async function loadFruit(name: string): Promise<Fruit | undefined> {
   const fruits: Fruit[] = [
     {
       name: 'strawberry',
