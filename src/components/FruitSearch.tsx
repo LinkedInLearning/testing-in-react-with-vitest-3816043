@@ -1,31 +1,26 @@
-import { SetStateAction, useEffect, useState } from 'react';
-import { Fruit, Fruits } from './Fruits';
+import { useEffect, useState } from 'react';
+import { AppDispatch, RootState } from '../app/store';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchFruit } from '../features/fruits/fruitApi';
 
 const FruitSearch = () => {
   const [fruitName, setFruitName] = useState('');
-  const [fruit, setFruit] = useState<Fruit | undefined>(undefined);
-  const [error] = useState<object | null>(null);
+  const dispatch: AppDispatch = useDispatch();
+  const fruit = useSelector((state: RootState) => state.fruits.fruit);
+  const status = useSelector((state: RootState) => state.fruits.status);
+  const error = useSelector((state: RootState) => state.fruits.error);
+
 
   useEffect(() => {
-    const fetchFruit = async () => {
-      const fetchedFruit = await Fruits(fruitName);
-
-      setFruit(fetchedFruit);
-    };
-
-    fetchFruit();
+    if (fruitName) {
+      dispatch(fetchFruit(fruitName))
+    }
 
     return () => {};
   }, [fruitName]);
 
-  if (error) {
-    return (
-      <div className="justify-content-center card p-3">{String(error)}</div>
-    );
-  }
-
   const handleInputChange = (event: {
-    target: { value: SetStateAction<string> };
+    target: { value: string };
   }) => {
     setFruitName(event.target.value);
   };
@@ -45,7 +40,19 @@ const FruitSearch = () => {
           </div>
         </div>
       </div>
-      {fruit ? (
+      {status === 'loading' && (
+        <div className="container text-center justify-content-center card p-3">
+          <div className="card-body">
+            <p className="card-text">Loading...</p>
+          </div>
+        </div>
+      )}
+
+      {status === 'failed' && error && (
+        <div className="justify-content-center card p-3">{String(error)}</div>
+      )}
+
+      {status === 'succeeded' && fruit ? (
         <div
           className="container text-center justify-content-center card p-3"
           key={fruit.id}
