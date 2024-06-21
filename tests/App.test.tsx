@@ -28,7 +28,7 @@ describe('App', () => {
     })).toHaveTextContent('Hello World');
   })
   
-  it('updates search value on input change', async () => {
+  it('Updates search value on input change', async () => {
     // ARRANGE
     const { input } = setup();
 
