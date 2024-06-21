@@ -1,7 +1,7 @@
-// src/store/fruitsSlice.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Fruit } from '../../components/Fruits';
-import { fetchFruit } from './fruitApi';
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { loadFruit } from '../../components/Fruits';
 
 interface FruitsState {
   fruit: Fruit | undefined;
@@ -14,6 +14,15 @@ const initialState: FruitsState = {
   status: 'idle',
   error: null,
 };
+
+// Async thunk for fetching fruit
+export const fetchFruit = createAsyncThunk(
+  'fruits/fetchFruit',
+  async (name: string) => {
+    const fruit = await loadFruit(name);
+    return fruit;
+  }
+);
 
 const fruitsSlice = createSlice({
   name: 'fruits',

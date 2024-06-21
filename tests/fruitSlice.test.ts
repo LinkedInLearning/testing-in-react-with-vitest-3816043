@@ -4,8 +4,7 @@ import { describe, expect, it } from 'vitest';
 
 import { RootState } from '../src/app/store';
 
-import fruitsReducer from '../src/features/fruits/fruitSlice'
-import { fetchFruit } from '../src/features/fruits/fruitApi';
+import fruitsReducer, { fetchFruit } from '../src/features/fruits/fruitSlice'
 
 import { Fruit } from '../src/components/Fruits';
 

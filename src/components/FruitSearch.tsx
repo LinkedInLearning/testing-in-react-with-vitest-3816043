@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { AppDispatch, RootState } from '../app/store';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchFruit } from '../features/fruits/fruitApi';
+import { fetchFruit } from '../features/fruits/fruitSlice';
 
 const FruitSearch = () => {
   const [fruitName, setFruitName] = useState('');
