@@ -15,6 +15,8 @@ const initialState: FruitsState = {
   error: null,
 };
 
+// Async Thunks - make it easier to work with asynchronous actions in Redux, by enabling
+// writing action creators that return a function instead of an action object.
 // Async thunk for fetching fruit
 export const fetchFruit = createAsyncThunk(
   'fruits/fetchFruit',
