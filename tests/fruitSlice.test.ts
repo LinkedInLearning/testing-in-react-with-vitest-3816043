@@ -1,4 +1,3 @@
-// src/store/fruitsSlice.test.ts
 import { configureStore } from '@reduxjs/toolkit';
 import { describe, expect, it } from 'vitest';
 
