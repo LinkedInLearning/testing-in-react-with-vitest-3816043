@@ -5,7 +5,9 @@ import { fetchFruit } from '../features/fruits/fruitApi';
 
 const FruitSearch = () => {
   const [fruitName, setFruitName] = useState('');
+
   const dispatch: AppDispatch = useDispatch();
+  
   const fruit = useSelector((state: RootState) => state.fruits.fruit);
   const status = useSelector((state: RootState) => state.fruits.status);
   const error = useSelector((state: RootState) => state.fruits.error);
