@@ -1,14 +1,16 @@
 import { describe, expect, it } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 
 import { MemoryRouter } from 'react-router-dom';
 
 import { WrappedApp, App } from '../src/App';
+import { renderWithProviders } from './test-utils';
+import FruitSearch from '../src/components/FruitSearch';
 
 describe('App', () => {
   it('Renders hello world', () => {
     // ARRANGE
-    render(<WrappedApp />);
+    renderWithProviders(<WrappedApp />);
 
     // ACT
 
@@ -18,6 +20,18 @@ describe('App', () => {
         level: 1,
       })
     ).toHaveTextContent('Hello World');
+  });
+
+  it('Renders fruit search component and fetches fruit data', async () => {
+    renderWithProviders(<FruitSearch />);
+
+    const input = screen.getByPlaceholderText(/Search for a fruit/i);
+    fireEvent.change(input, { target: { value: 'pear' } });
+
+    // Wait for the async action to finish
+    const fruitTitle = await screen.findByText(/Fruit: pear/i);
+
+    expect(fruitTitle).toBeInTheDocument();
   });
 
   it('Renders not found if path is invalid', () => {
