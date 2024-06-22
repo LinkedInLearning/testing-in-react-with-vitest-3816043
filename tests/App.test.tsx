@@ -4,13 +4,13 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
 import { WrappedApp, App } from '../src/App';
-import { renderWithProviders } from './test-utils';
+// import { renderWithProviders } from './test-utils';
 import FruitSearch from '../src/components/FruitSearch';
 
 describe('App', () => {
   it('Renders hello world', () => {
     // ARRANGE
-    renderWithProviders(<WrappedApp />);
+    // renderWithProviders(<WrappedApp />);
 
     // ACT
 
@@ -23,7 +23,7 @@ describe('App', () => {
   });
 
   it('Renders fruit search component and fetches fruit data', async () => {
-    renderWithProviders(<FruitSearch />);
+    // renderWithProviders(<FruitSearch />);
 
     const input = screen.getByPlaceholderText(/Search for a fruit/i);
     fireEvent.change(input, { target: { value: 'pear' } });
