@@ -4,7 +4,7 @@ import { render, RenderOptions } from '@testing-library/react';
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 
-import fruitsReducer from '../src/features/fruits/fruitSlice';
+import fruitsReducer from '../src/features/fruits/fruitsSlice';
 
 interface ExtendedRenderOptions extends Omit<RenderOptions, 'queries'> {
   preloadedState?: {};

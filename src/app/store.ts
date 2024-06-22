@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import fruitsReducer from '../features/fruits/fruitSlice'
+import fruitsReducer from '../features/fruits/fruitsSlice'
 
 export const store = configureStore({
   reducer: {
