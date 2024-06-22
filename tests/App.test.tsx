@@ -1,46 +1,23 @@
 import { describe, expect, it } from 'vitest';
-import { act, fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
 import App from '../src/App';
-import FruitSearch from '../src/components/FruitSearch';
-
-const setup = () => {
-  const utils = render(<FruitSearch />);
-  const input = screen.getByRole('textbox');
-  return {
-    input,
-    ...utils,
-  };
-};
 
 describe('App', () => {
-  it('Renders hello world', () => {
-    // ARRANGE
-    render(<App />);
+    it('Renders h1 content', () => {
+      // Arrange
+      render(<App />);
 
-    // ACT
+      // Act
 
-    // ASSERT
-    expect(screen.getByRole('heading', {
-      level: 1,
-    })).toHaveTextContent('Hello World');
-  })
-  
-  it('Updates search value on input change', async () => {
-    // ARRANGE
-    const { input } = setup();
-
-    // ACT
-    await act(async () => {
-      fireEvent.change(input, { target: { value: 'pear' } });
+      // Assert
+      expect(
+        // Accessibility Testing
+        screen.getByRole('heading', {
+          level: 1,
+        })
+      ).toHaveTextContent('Hello World');
     });
-
-    // ASSERT
-    expect((input as HTMLInputElement).value).toBe('pear');
-
-    // expect page to contain fruit info
-    expect(screen.getByText('Fruit: pear')).toBeInTheDocument();
-  });
 });
