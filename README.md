@@ -1,6 +1,10 @@
 # Testing in React with Vitest
 This is the repository for the LinkedIn Learning course `Testing in React with Vitest`. The full course is available from [LinkedIn Learning][lil-course-url].
 
+![lil-thumbnail-url]
+
+This course guides you through the process of setting up and testing web applications using Vitest integrated with the React Testing Library and other essential libraries. Learn how to set up a React app with Vite, install dependencies, and initialize your project, as you explore the basics of Vitest and how it can fit into your testing strategy with instructor Cyrus Ndirangu. Configure ESLint and Prettier to maintain code quality and style consistency, before you get started with your first unit test. Progressively, discover best practices for testing application state and hooks quickly and efficiently. By the end of the course, you’ll be ready to write tests that validate your application's functionality, including testing mock API requests and ensuring correct routing using the React Router. With practical examples and expert guidance throughout, this course shows you why testing is so crucial and how to use it to improve your development workflow.
+
 _See the readme file in the main branch for updated instructions and information._
 ## Instructions
 This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
@@ -20,15 +24,19 @@ To resolve this issue:
     Add changes to git using this command: git add .
 	Commit changes using this command: git commit -m "some message"
 
-## Installing
-1. To use these exercise files, you must have the following installed:
-	- [list of requirements for course]
-2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
-3. [Course-specific instructions]
+## Instructor
+
+Cyrus Ndirangu
+
+Software Engineer | Computer Science Educator | Founder
+
+                            
+
+Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/cyrus-ndirangu?u=104).
 
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
-[lil-course-url]: https://www.linkedin.com/learning/
-[lil-thumbnail-url]: http://
+[lil-course-url]: https://www.linkedin.com/learning/testing-in-react-with-vitest/
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4E0DAQGTwslFt6yQKg/learning-public-crop_675_1200/learning-public-crop_675_1200/0/1724797747518?e=2147483647&v=beta&t=TUiq3CaQcWOEteqMIvzX0L4Ap3nMMYX9BI4TGXAD2cc
 
